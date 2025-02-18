@@ -5,7 +5,7 @@ services:
     container_name: codaru
     environment:
       POSTGRES_USER: saejin
-      POSTGRES_PASSWORD: gr4h4m@cr4ck3r#ch0c0l4t3%m4rshm4ll0w
+      POSTGRES_PASSWORD: gr4h4m^cr4ck3r#ch0c0l4t3%m4rshm4ll0w
       POSTGRES_DB: codaru-db
     ports:
       - "5432:5432"

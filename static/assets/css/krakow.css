@@ -1,0 +1,211 @@
+.hero {
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "league spartan";
+}
+.hero-image {
+    margin-left: -5vw;
+    height: 75%;
+}
+.hero-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+.hero-krakow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-logo {
+    width: 12vmin;
+    height: 12vmin;
+}
+.hero-title {
+    font-size: 12vmin;
+    font-weight: bold;
+}
+.hero-subtitle {
+    font-size: 5vmin;
+}
+.signup-button {
+    margin-top: 9vh;
+    background: #5e8f4c;
+    height: 8vmin;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.2s;
+    width: 60%;
+    color: #f8f4dC;
+    font-family: "varela";
+    font-size: 5vmin;
+}
+.signup-button .text {
+    position: absolute;
+    font-weight: normal;
+    transform: translateY(0%);
+    transition: transform 0.2s;
+}
+.signup-button .text.hover {
+    transform: translateY(150%);
+    transition: transform 0.3s;
+}
+.signup-button .icons {
+    position: absolute;
+    font-size: inherit;
+    transform: translateY(-150%);
+    transition: transform 0.2s;
+}
+.signup-button .icons.hover {
+    transform: translateY(0vh);
+    transition: transform 0.3s;
+}
+.signup-button:active {
+    background: #7e9f6c;
+    transition: background 0.3s;
+}
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100dvh;
+}
+.timeline-image {
+    height: 120%;
+    margin-right: -5vw;
+}
+.timeline-canvas {
+    width: 65%;
+    height: 100%;
+    margin-left: -2.5%;
+}
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100dvh;
+}
+.about-image {
+    width: 50%;
+    margin-left: -10vw;
+}
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    padding-left: 5vw;
+    padding-right: 4vw;
+}
+.about-title {
+    font-size: 12vmin;
+    font-weight: bold;
+    font-family: "league spartan";
+}
+.about-text {
+    font-family: "outfit";
+    font-size: 3vmin;
+    font-weight: 300;
+}
+.faq {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100dvh;
+}
+.faq-image {
+    height: 100%;
+    margin-right: -10vw;
+}
+.faq-content {
+    flex-grow: 1;
+    height: 100%;
+    display: block;/*flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;*/
+    padding: 5vh 0;
+}
+.faq-title {
+    font-size: 12vmin;
+    font-weight: bold;
+    margin-bottom: 5vh;
+}
+.faq-container {
+    height: 100%;
+    width: 90%;
+    position: relative;
+}
+.faq-question {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    max-height: 8vh;
+    border: 5px solid #1b1d21;
+    padding: 0 1vw;
+    transition: max-height 0.5s;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    outline: none;
+}
+.question-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1vw;
+    font-family: "outfit";
+    font-size: 4vmin;
+    font-weight: bold;
+    height: 8vh;
+    cursor: pointer;
+    z-index: 2;
+}
+.question-symbol {
+    font-family: "outfit";
+    font-size: 6vmin;
+    transition: rotate 0.5s;
+}
+.question-answer {
+    width: 100%;
+    padding: 1vh 2vw 2vh 2vw;
+    font-family: "outfit";
+    font-size: 3vmin;
+    font-weight: 300;
+    display: block;
+    opacity: 0;
+    margin-top: -10vh;
+    transition: opacity 0.3s, margin-top 0.5s;
+}
+/* mobile stuff
+@media (max-width: 767px) {
+    .timeline {
+        flex-direction: column;
+    }
+    .timeline-canvas {
+        width: 100%;
+        height: 65%;
+    }
+    .timeline-image {
+        display: none;
+    }
+}
+*/

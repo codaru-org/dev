@@ -1,0 +1,250 @@
+/*
+    TODO:
+        fix the registration fields + button.
+        timeline below the hero.
+        about.
+        faq.
+        the footer (contacts here).
+        tos + privacy.
+        registration page. (wavin' hand icon)
+*/
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: #1b1d21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-card {
+    width: 90%;
+    height: 85%;
+    background: #e7d6bc;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+.hero-card-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 85vh;
+    z-index: -1;
+    font-family: code;
+    color: rgba(0, 0, 0, 0.0875);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 7.5vmin;
+    text-wrap: nowrap;
+    filter: blur(3px);
+    user-select: none;
+    margin: 0px;
+    padding: 0;
+    
+}
+.hero-card-background p {
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+}
+.hero-card-noise {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 58%;
+    height: 100%;
+    pointer-events: none;
+    background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><defs><filter id="transparentFractalNoise"><feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="2" seed="42"/><feColorMatrix type="matrix" values="0.2 0 0 0 0 0.2 0 0 0 0 0.2 0 0 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="2" /><feColorMatrix type="matrix" values="0.985 0 0 0 0 0 0.926 0 0 0 0 0 0.846 0 0 0 0 0 0.5 0" /></filter></defs><rect width="100%" height="100%" filter="url(%23transparentFractalNoise)"/></svg>');
+    z-index: -1;
+    opacity: 0.5;
+}
+.hero-card-gradient {
+    position: absolute;
+    top: 0;
+    left: 43%;
+    width: 15%;
+    height: 100%;
+    background: linear-gradient(to right, #f6e5cb00, #f6e5cb);
+    z-index: 0;
+}
+.hero-card-radial {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 55%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(circle, #f6e5cbAA, #f6e5cb00);
+    z-index: 0;
+}
+.hero-card-content {
+    width: 50%;
+    height: 100%;
+    padding: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-card-logo {
+    width: 20vmin;
+    height: 20vmin;
+    margin-right: 3vw;
+    z-index: 1;
+    margin-bottom: 5vh;
+}
+.hero-card-text {
+    font-family: "league spartan";
+    color: #1b1d21;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18vmin;
+    z-index: 1;
+}
+.hero-registration-card {
+    width: 44.5%;
+    height: 100%;
+    background: #f6e5cb;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-registration-flex-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    color: #1b1d21;
+    font-size: 5vmin;
+}
+.hero-registration-flex-card .icons {
+    font-size: 8vmin;
+}
+.welcome-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2vmin;
+    color: #1b1d21;
+}
+.welcome {
+    font-size: 10vmin;
+    font-weight: bold;
+}
+.welcome-pep-talk {
+    font-size: 4vmin;
+}
+.registration-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2vmin;
+}
+.form-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    position: relative;
+}
+.error-message {
+    font-size: 3vmin;
+    color: #e67e80;
+}
+.form-group label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 3vmin;
+    color: #555;
+    transform: translate(0vw, 3vh);
+    transition: transform 0.2s, color 0.2s, font-size 0.2s;
+    z-index: 0;
+}
+.form-group .underline {
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 2px;
+    background: #1b1d21;
+    transition: height 0.075s;
+    z-index: 1;
+}
+.form-group .underline.input-active {
+    height: 3px;
+    transition: height 0.125s;
+}
+.form-group label.input-active {
+    font-size: 2.25vmin;
+    transform: translate(0vw, 0vh);
+    color: #1b1d21;
+    transition: transform 0.3s, color 0.3s, font-size: 0.3s;
+}
+.form-group input {
+    background: none;
+    border: none;
+    outline: none;
+    font-family: "league spartan";
+    font-size: 2.5vmin;
+    padding: 2vmin;
+    width: 20vw;
+    margin-top: 1.5vh;
+    color: #5e8f4c;
+    z-index: 1;
+}
+.login-button {
+    margin-bottom: 5vh;
+    margin-top: 3vh;
+    background: #5e8f4c;
+    font-size: 3vmin;
+    height: 5vmin;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.2s;
+    width: 70%;
+    color: #f6e5cb;
+}
+.login-button .text {
+    position: absolute;
+    transform: translateY(0%);
+    transition: transform 0.2s;
+}
+.login-button .text.hover {
+    transform: translateY(150%);
+    transition: transform 0.3s;
+}
+.login-button .icons {
+    position: absolute;
+    font-size: inherit;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+}
+.login-button .icons.hover {
+    transform: translateY(0vh);
+    transition: transform 0.3s;
+}
+.login-button:active {
+    background: #7e9f6c;
+    transition: background 0.3s;
+}

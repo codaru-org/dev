@@ -1,58 +1,19 @@
-let timeline;
-const isMobile = !!window.matchMedia("(max-width: 767px)").matches;
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            timeline.play();
-            observer.unobserve(entry.target);
-        }
-    });
-}, {
-    threshold: 0.5,
-    root: null,
-});
-
 window.onload = () => {
-    // DOM
-    const signupButton = document.getElementsByClassName("signup-button")[0]
-    signupButton.onmouseover = () => {
-        signupButton.querySelector(".text").classList.add("hover");
-        signupButton.querySelector(".icons").classList.add("hover");
-    }
-    signupButton.onmouseout = () => {
-        signupButton.querySelector(".text").classList.remove("hover");
-        signupButton.querySelector(".icons").classList.remove("hover");
-    }
-    
-    const faqContainers = document.getElementsByClassName("faq-question")
-    for(container of faqContainers){
-        let open = false;
-        const symbol = container.querySelector(".question-symbol");
-        const answer = container.querySelector(".question-answer");
-        const question = container.querySelector(".question-text");
-        const banner = container.querySelector(".question-banner");
-        const maxHeight = answer.scrollHeight + banner.scrollHeight + container.scrollHeight;
-        banner.onclick = () => {
-            open = !open;
-            if (open) {
-                container.style.maxHeight = maxHeight + "px";
-                container.style.zIndex = "2";
-                symbol.style.rotate = "135deg";
-                answer.style.opacity = 1;
-                answer.style.marginTop = "0vh";
+    let timeline;
+    const isMobile = !!window.matchMedia("(max-width: 767px)").matches;
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                timeline.play();
+                observer.unobserve(entry.target);
             }
-            else {
-                container.style.zIndex = "1";
-                container.style.maxHeight = "8vh";
-                symbol.style.rotate = "0deg";
-                answer.style.opacity = 0;
-                answer.style.marginTop = "-10vh";
-            }
-        }
-    }
-    
+        });
+    }, {
+        threshold: 0.5,
+        root: null,
+    });
     // canvas
-    const canvasElement = document.getElementsByClassName("timeline-canvas")[0]
+    const canvasElement = document.getElementsByTagName("canvas")[0]
     const bounds = canvasElement.getBoundingClientRect()
     
     // setup

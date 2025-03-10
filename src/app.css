@@ -1,3 +1,7 @@
+@tailwind utilities;
+@import "tailwindcss/preflight";
+@import 'tailwindcss';
+
 body {
     overflow-x: hidden;
 }

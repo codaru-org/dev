@@ -1,5 +1,7 @@
 .zed
 node_modules
+package-lock.json
+bun.lock
 
 # Output
 .output
